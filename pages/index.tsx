@@ -17,9 +17,9 @@ export default function Home() {
 			</Head>
 			<article
 				id="hero"
-				className="relative  z-50 flex h-screen w-screen snap-y snap-mandatory flex-col items-center justify-around bg-blue text-white lg:flex-row"
+				className="relative z-50 flex h-screen w-screen snap-y snap-mandatory flex-col items-center justify-around text-blue lg:flex-row"
 			>
-				<div className="flex flex-col justify-center">
+				<div className=" flex flex-col justify-center">
 					<motion.div
 						initial={{ opacity: 0, scale: 0.2 }}
 						animate={{ opacity: 0.2, scale: 1 }}
@@ -28,7 +28,7 @@ export default function Home() {
 							delay: 1,
 							type: 'spring',
 						}}
-						className="absolute -z-10 grid aspect-square w-[70%] place-self-center rounded-full border-[1px] border-cyan bg-white opacity-20 md:w-[50%]"
+						className="absolute -z-10 grid aspect-square w-[70%] place-self-center rounded-full border-[1px] border-orange bg-white opacity-20 md:w-[50%]"
 					>
 						<Image src={logo} alt={'Logo de diazpugh'} />
 					</motion.div>
@@ -72,6 +72,7 @@ export default function Home() {
 				<h2 className="capitalized mx-auto max-w-md pt-28 text-center font-poppins text-4xl font-[500] text-blue md:max-w-2xl md:text-6xl">
 					mis servicios
 				</h2>
+				<div className="h-20 w-screen"></div>
 				<ServicesContainer />
 			</article>
 		</Layout>
