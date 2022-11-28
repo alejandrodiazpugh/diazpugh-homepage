@@ -70,6 +70,9 @@ export default function Navbar() {
 					<li className="lg:transition-colors lg:hover:text-cyan">
 						<Link href={'/'}>Inicio</Link>
 					</li>
+					<li className="lg:transition-colors lg:hover:text-cyan">
+						<Link href={'/precios'}>Precios</Link>
+					</li>
 
 					<li className="lg:transition-colors lg:hover:text-cyan">
 						<Link href={'/contacto'}>Contacto</Link>

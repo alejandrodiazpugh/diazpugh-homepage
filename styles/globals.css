@@ -18,3 +18,7 @@ body::-webkit-scrollbar-thumb {
 	background-color: #00d7c3;
 	outline: 1px solid #00d7c3;
 }
+
+body {
+	min-height: 100vh;
+}

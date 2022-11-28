@@ -6,7 +6,7 @@ type Props = {};
 
 export default function ServicesTableContainer({}: Props) {
 	return (
-		<section className="grid place-content-center gap-10">
+		<section className="mb-20 grid place-content-center gap-10">
 			{servicesContent?.map((service) => (
 				<Service
 					key={service.id}

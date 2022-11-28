@@ -5,7 +5,7 @@ import Footer from './Footer';
 type Props = {
 	children: React.ReactNode;
 };
-export const siteTitle = 'diazpugh: Desarrollo Web';
+export const siteTitle = 'diazpugh - Desarrollo Web';
 
 export default function Layout({ children }: Props) {
 	return (
@@ -21,7 +21,7 @@ export default function Layout({ children }: Props) {
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<Navbar />
-			<div>{children}</div>
+			<main className="min-h-screen">{children}</main>
 			<Footer />
 		</>
 	);

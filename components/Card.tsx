@@ -61,7 +61,11 @@ export default function Card({
 					</ul>
 				</div>
 			) : (
-				<p className="mx-7 basis-96 py-6 font-sourceCode text-xl text-blue">
+				<p
+					className={`mx-7 basis-96 py-6 font-sourceCode text-xl ${
+						!hover ? 'text-gray-700' : 'text-blue'
+					}`}
+				>
 					{content}
 				</p>
 			)}

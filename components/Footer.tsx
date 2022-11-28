@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
 	return (
-		<footer className="w-screen bg-blue font-sourceCode text-white shadow-top">
+		<footer className="mt-auto w-screen bg-blue font-sourceCode text-white shadow-top">
 			<ul className="flex h-full items-start justify-around">
 				<li className="flex flex-col gap-3">
 					Mapa de Sitio

@@ -25,16 +25,16 @@ export default function Service({
 		}
 		return true;
 	};
-	const pillClasses = `absolute -z-40 h-48 w-96 rotate-45 rounded-full bg-${color}`;
-	console.log(color);
+	console.log(!!color);
 	return (
-		<div className="grid max-w-6xl grid-cols-3 place-items-center">
-			<div className={pillClasses}></div>
-			<h3 className="col-span-3 text-left font-poppins text-3xl">
+		<div className="grid max-w-6xl cursor-default grid-cols-3 place-items-center text-gray-700">
+			<h3
+				className={`col-span-3 row-auto text-center text-decoration-${color} font-poppins text-3xl underline`}
+			>
 				{title}
 			</h3>
 			<p
-				className={`text-md ${
+				className={`text-md px-10 text-center ${
 					isEven(id) && 'col-start-2'
 				} col-span-2 font-sourceCode`}
 			>
@@ -43,7 +43,9 @@ export default function Service({
 			<Image
 				src={img}
 				alt={alt}
-				className={`col-span-1 w-96 ${isEven(id) && 'col-start-1'}`}
+				className={`col-span-1 ${
+					isEven(id) && 'col-start-1 row-start-2'
+				}`}
 			></Image>
 		</div>
 	);
