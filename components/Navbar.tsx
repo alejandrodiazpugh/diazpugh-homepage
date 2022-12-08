@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import nombre from '../public/images/ADP-07.png';
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Navbar() {
 	const BREAKPOINT: number = 767;
@@ -65,24 +65,29 @@ export default function Navbar() {
 						<GiHamburgerMenu className="fill-blue" />
 					)}
 				</button>
-				<ul
-					className={
-						navOpen
-							? 'absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-white pr-10 text-blue shadow-md transition-all'
-							: 'hidden w-screen flex-col items-end justify-center gap-10 text-blue lg:flex lg:flex-row lg:justify-end lg:pr-10'
-					}
-				>
-					<li className="lg:transition-colors lg:hover:text-cyan">
-						<Link href={'/'}>Inicio</Link>
-					</li>
-					<li className="lg:transition-colors lg:hover:text-cyan">
-						<Link href={'/servicios'}>Servicios</Link>
-					</li>
+				<AnimatePresence>
+					<motion.ul
+						initial={{ y: -500 }}
+						animate={{ y: 0 }}
+						exit={{ y: -500 }}
+						className={
+							navOpen
+								? 'absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-white pr-10 text-blue shadow-md transition-all'
+								: 'hidden w-screen flex-col items-end justify-center gap-10 text-blue lg:flex lg:flex-row lg:justify-end lg:pr-10'
+						}
+					>
+						<li className="lg:transition-colors lg:hover:text-cyan">
+							<Link href={'/'}>Inicio</Link>
+						</li>
+						<li className="lg:transition-colors lg:hover:text-cyan">
+							<Link href={'/servicios'}>Servicios</Link>
+						</li>
 
-					<li className="lg:transition-colors lg:hover:text-cyan">
-						<Link href={'/contacto'}>Contacto</Link>
-					</li>
-				</ul>
+						<li className="lg:transition-colors lg:hover:text-cyan">
+							<Link href={'/contacto'}>Contacto</Link>
+						</li>
+					</motion.ul>
+				</AnimatePresence>
 			</nav>
 		</header>
 	);

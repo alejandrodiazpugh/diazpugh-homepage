@@ -2,7 +2,6 @@ import Head from 'next/head';
 import React from 'react';
 import Layout from '../components/Layout';
 import PricingTable from '../components/PricingTable';
-import fs from 'fs';
 import { GetStaticProps } from 'next';
 import { parseData } from '../utils/parseData';
 
@@ -16,7 +15,7 @@ type Props = {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const allPricingData = await parseData('../data/pricing.json');
+	const allPricingData = await parseData('./data/pricing.json');
 
 	return { props: { allPricingData } };
 };

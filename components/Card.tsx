@@ -1,6 +1,7 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import CardExpanded from './CardExpanded';
+import { AnimatePresence } from 'framer-motion';
 
 type Props = {
 	title: string;
@@ -43,15 +44,17 @@ export default function Card({
 					</p>
 				</div>
 			</section>
-			{showModal && (
-				<CardExpanded
-					title={title}
-					content={content}
-					buttonDescription={buttonDescription}
-					buttonBullets={buttonBullets}
-					handleClick={handleClick}
-				/>
-			)}
+			<AnimatePresence>
+				{showModal && (
+					<CardExpanded
+						title={title}
+						content={content}
+						buttonDescription={buttonDescription}
+						buttonBullets={buttonBullets}
+						handleClick={handleClick}
+					/>
+				)}
+			</AnimatePresence>
 		</>
 	);
 }
