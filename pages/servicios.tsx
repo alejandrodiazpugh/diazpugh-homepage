@@ -5,13 +5,15 @@ import PricingTable from '../components/PricingTable';
 import { GetStaticProps } from 'next';
 import { parseData } from '../utils/parseData';
 
-type allPricingData = {
+export type allPricingData = {
+	id: number;
 	title: string;
 	content: string[];
+	pricePoint: number;
 };
 
 type Props = {
-	allPricingData: allPricingData;
+	allPricingData: allPricingData[];
 };
 
 export const getStaticProps: GetStaticProps = async () => {

@@ -1,9 +1,23 @@
 import React from 'react';
+import type { allPricingData } from '../pages/servicios';
+import PricingColumn from './PricingColumn';
 
 type Props = {
-	tableContent: object;
+	tableContent: allPricingData[];
 };
 
 export default function PricingTable({ tableContent }: Props) {
-	return <div>PricingTable</div>;
+	console.log(tableContent);
+	return (
+		<section>
+			{tableContent.map((tier) => (
+				<PricingColumn
+					key={tier.id}
+					header={tier.title}
+					cells={tier.content}
+					price={tier.pricePoint}
+				/>
+			))}
+		</section>
+	);
 }
