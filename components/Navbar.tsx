@@ -66,27 +66,44 @@ export default function Navbar() {
 					)}
 				</button>
 				<AnimatePresence>
-					<motion.ul
-						initial={{ y: -500 }}
-						animate={{ y: 0 }}
-						exit={{ y: -500 }}
-						className={
-							navOpen
-								? 'absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-white pr-10 text-blue shadow-md transition-all'
-								: 'hidden w-screen flex-col items-end justify-center gap-10 text-blue lg:flex lg:flex-row lg:justify-end lg:pr-10'
-						}
-					>
-						<li className="lg:transition-colors lg:hover:text-cyan">
-							<Link href={'/'}>Inicio</Link>
-						</li>
-						<li className="lg:transition-colors lg:hover:text-cyan">
-							<Link href={'/servicios'}>Servicios</Link>
-						</li>
+					{navOpen ? (
+						<motion.ul
+							key={'navLinks'}
+							initial={{ opacity: 0, scaleY: 0 }}
+							animate={{ opacity: 1, scaleY: 1 }}
+							transition={{
+								type: 'tween',
+								duration: 0.1,
+							}}
+							style={{ originY: 0 }}
+							exit={{ scaleY: 0 }}
+							className="absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-white pr-10 text-blue shadow-md transition-all"
+						>
+							<li className="lg:transition-colors lg:hover:text-cyan">
+								<Link href={'/'}>Inicio</Link>
+							</li>
+							<li className="lg:transition-colors lg:hover:text-cyan">
+								<Link href={'/servicios'}>Servicios</Link>
+							</li>
 
-						<li className="lg:transition-colors lg:hover:text-cyan">
-							<Link href={'/contacto'}>Contacto</Link>
-						</li>
-					</motion.ul>
+							<li className="lg:transition-colors lg:hover:text-cyan">
+								<Link href={'/contacto'}>Contacto</Link>
+							</li>
+						</motion.ul>
+					) : (
+						<ul className="hidden w-screen flex-col items-end justify-center gap-10 text-blue lg:flex lg:flex-row lg:justify-end lg:pr-10">
+							<li className="lg:transition-colors lg:hover:text-cyan">
+								<Link href={'/'}>Inicio</Link>
+							</li>
+							<li className="lg:transition-colors lg:hover:text-cyan">
+								<Link href={'/servicios'}>Servicios</Link>
+							</li>
+
+							<li className="lg:transition-colors lg:hover:text-cyan">
+								<Link href={'/contacto'}>Contacto</Link>
+							</li>
+						</ul>
+					)}
 				</AnimatePresence>
 			</nav>
 		</header>
