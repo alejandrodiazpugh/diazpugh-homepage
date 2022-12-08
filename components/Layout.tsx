@@ -5,7 +5,6 @@ import Footer from './Footer';
 type Props = {
 	children: React.ReactNode;
 };
-export const siteTitle = 'diazpugh - Desarrollo Web';
 
 export default function Layout({ children }: Props) {
 	return (
@@ -15,9 +14,13 @@ export default function Layout({ children }: Props) {
 
 				<meta
 					name="description"
-					content="Learn how to build a personal website using Next.js"
+					content="Diseño y Desarrollo web para todas tus necesidades en línea."
 				/>
-				<meta name="og:title" content={siteTitle} />
+				<meta
+					name="keywords"
+					content="desarrollo, web, diseño, ecommerce, comercio, blog, cms, marketing digital, branding, base de datos, dominio, react, nextjs"
+				/>
+				<meta name="og:title" content="diazpugh - Desarrollo Web" />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<Navbar />

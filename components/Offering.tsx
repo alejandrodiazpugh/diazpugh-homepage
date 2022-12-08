@@ -25,7 +25,6 @@ export default function Service({
 		}
 		return true;
 	};
-	console.log(!!color);
 	return (
 		<div className="grid max-w-6xl cursor-default grid-cols-3 place-items-center text-gray-700">
 			<h3
@@ -41,9 +40,11 @@ export default function Service({
 				{description}
 			</p>
 			<Image
+				width={300}
+				height={300}
 				src={img}
 				alt={alt}
-				className={`col-span-1 ${
+				className={`col-span-1 w-auto ${
 					isEven(id) && 'col-start-1 row-start-2'
 				}`}
 			></Image>

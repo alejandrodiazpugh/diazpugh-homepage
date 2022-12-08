@@ -1,18 +1,43 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/Layout';
-import Button from '../components/Button';
+import Layout from '../components/Layout';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import logo from '../public/images/ADP-04.png';
 import * as copy from '../utils/copyText';
 import CardContainer from '../components/CardContainer';
-import ServicesContainer from '../components/ServicesContainer';
+import OfferingContainer from '../components/OfferingContainer';
+import { parseData } from '../utils/parseData';
+import { GetStaticProps } from 'next';
+import { StaticImageData } from 'next/image';
 
-export default function Home() {
+export type Service = {
+	title: string;
+	description: string;
+	img: StaticImageData;
+	alt: string;
+	color: string;
+	id: number;
+};
+
+type Props = {
+	servicesData: Service[];
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+	const servicesData = await parseData('./data/services.json');
+
+	return { props: { servicesData } };
+};
+
+export default function Home({ servicesData }: Props) {
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle}</title>
+				<title>diazpugh - Desarrollo Web</title>
+				<meta
+					name="description"
+					content="Descubre los paquetes que ofrezo para poder adaptarme a tus necesidades."
+				/>
 			</Head>
 			<article
 				id="hero"
@@ -45,12 +70,12 @@ export default function Home() {
 					}}
 					className="-z-50 col-span-2 grid aspect-square w-[70%] cursor-pointer place-self-center rounded-full border-[1px] border-orange bg-pink opacity-25 shadow-md transition-all md:w-[50%] lg:col-span-1"
 				>
-					<Image src={logo} alt={'Logo de diazpugh'} />
+					<Image src={logo} alt={'Logo de diazpugh'} priority />
 				</motion.div>
 			</article>
 			<div className="relative m-auto max-w-2xl">
 				<h2 className="capitalized mx-auto max-w-md pt-28 text-center font-poppins text-4xl font-[500] text-gray-700 md:max-w-2xl md:text-6xl">
-					Tu huella en la red.
+					Tu huella en la red
 				</h2>
 				<div className="absolute top-56 -z-20 aspect-square w-32 rounded-full bg-orange opacity-80 lg:w-48"></div>
 				<div className="my-10 mx-auto flex max-w-lg flex-col gap-5 text-center">
@@ -70,10 +95,10 @@ export default function Home() {
 			</article>
 			<article>
 				<h2 className="mx-auto max-w-md pt-28 text-center font-poppins text-4xl font-[500] capitalize text-gray-700 md:max-w-2xl md:text-6xl">
-					Mis servicios.
+					qué te ofrezco
 				</h2>
 				<div className="h-20 w-screen"></div>
-				<ServicesContainer />
+				<OfferingContainer servicesData={servicesData} />
 			</article>
 		</Layout>
 	);

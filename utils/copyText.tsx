@@ -73,14 +73,14 @@ interface services {
 	title: string;
 	description: string;
 	img: StaticImageData;
-	id: number;
+	id: string;
 	alt: string;
 	color: 'yellow' | 'pink' | 'orange' | 'cyan';
 }
 
 export const servicesContent: services[] = [
 	{
-		id: 1,
+		id: '1',
 		title: 'Dominio y hosting para alta velocidad de carga',
 		description:
 			'Tu sitio necesita ser sencillo de encontrar, y sin que te preocupes por servidores ni tipos de conexiones. Me encargo de conectar tu dominio al hosting adecuado, y darle a tu sitio la tarjeta de presentación que se merece',
@@ -89,7 +89,7 @@ export const servicesContent: services[] = [
 		color: 'yellow',
 	},
 	{
-		id: 2,
+		id: '2',
 		title: 'Optimización para motores de búsqueda y estilo responsivo para cualquier dispositivo',
 		description:
 			'La mayoría del tráfico de la red se da por medio de smartphones. La manera de destacar en los motores de búsqueda es con sitios responsivos, accesibles, y fáciles de usar',
@@ -98,7 +98,7 @@ export const servicesContent: services[] = [
 		color: 'pink',
 	},
 	{
-		id: 3,
+		id: '3',
 		title: 'Conexión con sistemas de manejo de contenido',
 		description:
 			'Ya sea que buscas construir un blog, o conectar uno ya existente, me encargo de que tu experiencia sea lo más sencilla posible.',
@@ -107,7 +107,7 @@ export const servicesContent: services[] = [
 		color: 'cyan',
 	},
 	{
-		id: 4,
+		id: '4',
 		title: 'Formularios de comunicación con clientes listos para usarse',
 		description:
 			'Facilita la comunicación con tus clientes por medio de formularios de contacto, boletines con ofertas y promociones, o seguimiento de pedidos.',

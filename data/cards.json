@@ -1,0 +1,38 @@
+[
+	{
+		"title": "01",
+		"content": "Creamos tu sistema de diseño en conjunto",
+		"buttonContent": "buttonContent",
+		"buttonDescription":
+			"Me aseguro de encontrar el estilo perfecto para que tu sitio sea justo lo que tienes en mente.",
+		"buttonBullets": [
+			"¿Qué tono queremos tranmitir con la tipografía?",
+			"¿Qué paleta de colores usaremos?" ,
+			"¿Cuál es el contenido más importante? ¿Cómo lo mostraremos?"
+		]
+	},
+	{
+		"title": "02",
+		"content": "Desarrollo el sitio basado en tus necesidades",
+		"buttonContent": "buttonContent",
+		"buttonDescription":
+			"Escalamos el código de tu sitio para que implementemos justo la funcionalidad que buscas.",
+		"buttonBullets": [
+			"¿Buscas un e-commerce con procesamiento de pagos?",
+			"¿Necesitas conectar un blog y boletín al sitio?",
+			"¿Quieres recibir tu feed de videos directamente en la página de inicio?"
+		]
+	},
+	{
+		"title": "03",
+		"content": "Entrego el sitio listo para utilizarse, sin complicaciones",
+		"buttonContent": "buttonContent",
+		"buttonDescription":
+			"Ya sea que posees el dominio o necesitas levantar todo desde cero, no tienes que preocuparte por configurar nada.",
+		"buttonBullets": [
+			"El sitio está optimizado para motores de búsqueda.",
+			"El tiempo de carga está minimizado para el tamaño de la página.",
+			"El contenido se apega a las guías de accesibilidad."
+		]
+	}
+]

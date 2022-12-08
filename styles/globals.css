@@ -22,3 +22,8 @@ body::-webkit-scrollbar-thumb {
 body {
 	min-height: 100vh;
 }
+
+.translate-z-0 {
+	transform: translate(0);
+	-webkit-transform: translateZ(0);
+}

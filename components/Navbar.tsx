@@ -47,7 +47,12 @@ export default function Navbar() {
 			<nav className="flex h-full w-screen items-center justify-between pr-10">
 				<div>
 					<Link href={'/'}>
-						<Image className="relative w-64" src={nombre} alt="" />{' '}
+						<Image
+							className="relative w-64"
+							priority
+							src={nombre}
+							alt=""
+						/>{' '}
 					</Link>
 				</div>
 				<button
@@ -71,7 +76,7 @@ export default function Navbar() {
 						<Link href={'/'}>Inicio</Link>
 					</li>
 					<li className="lg:transition-colors lg:hover:text-cyan">
-						<Link href={'/precios'}>Precios</Link>
+						<Link href={'/servicios'}>Servicios</Link>
 					</li>
 
 					<li className="lg:transition-colors lg:hover:text-cyan">
