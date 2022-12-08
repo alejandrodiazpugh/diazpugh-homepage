@@ -1,17 +1,80 @@
 [
     {
+        "id": 1,
         "title": "Invitaciones Virtuales",
         "content": [
             "Dominio",
             "Hosting",
             "Sitio con 1 página",
-            "Contenido Estático (no cambia mucho)",
-            "Diseño Responsive",
-            "1 Ronda de Revisiones",
-            "5 días hábiles para el diseño final",
+            "Diseño responsive",
+            "1 Ronda de revisiones",
+            "Contenido estático",
             "Invitaciones Personalizadas con código por invitado",
             "Galería de Fotografías (hasta 30 imágenes)",
             "Formulario de confirmación"            
-        ]
+        ],
+        "pricePoint": 1700
+    },
+    {
+        "id": 2,
+        "title": "Sitio Estático - Huella Digital",
+        "content": [
+            "Dominio",
+            "Hosting",
+            "Sitio con hasta 5 páginas",
+            "Diseño responsive",
+            "2 Rondas de revisiones",
+            "Contenido estático",
+            "Conexión de correo electrónico con dominio del sitio",
+            "Generación de íconos e imágenes para utilizar en el sitio",
+            "Uso ílimitado de imágenes",
+            "Formulario de contacto y/o boletín conectado a un correo electrónico y base de datos",
+            "Sitio optimizado para SEO"            
+        ],
+        "pricePoint": 5000
+    },
+    {
+        "id": 3,
+        "title": "Sitio Dinámico - Manejo de Contenido",
+        "content": [
+            "Dominio",
+            "Hosting",
+            "Sitio con hasta 100 páginas",
+            "Diseño responsive",
+            "3 Rondas de revisiones",
+            "Contenido dinámico conectado desde un programa de CMS",
+            "Conexión de correo electrónico con dominio del sitio",
+            "Generación de íconos e imágenes para utilizar en el sitio",
+            "Uso ílimitado de imágenes",
+            "Formulario de contacto y/o boletín conectado a un correo electrónico y base de datos",
+            "Sitio optimizado para SEO",
+            "Página de administrador para modificar contenido",
+            "Sección de comentarios en el contenido"            
+        ],
+        "pricePoint": 17000
+    },
+    {
+        "id": 4,
+        "title": "Sitio Dinámico - e-commerce",
+        "content": [
+            "Dominio",
+            "Hosting",
+            "Sitio con hasta 1,000 páginas",
+            "Diseño responsive",
+            "3 Rondas de revisiones",
+            "Contenido dinámico conectado desde un programa de CMS y a base de datos",
+            "Conexión de correo electrónico con dominio del sitio",
+            "Generación de íconos e imágenes para utilizar en el sitio",
+            "Uso ílimitado de imágenes",
+            "Formulario de contacto y/o boletín conectado a un correo electrónico y base de datos",
+            "Sitio optimizado para SEO",
+            "Página de administrador para modificar contenido",
+            "Sección de comentarios en el contenido",
+            "Verificación de usuarios",
+            "Carrito de compra",
+            "Conexión a sistemas de pago"           
+        ],
+        "pricePoint": 25000
     }
+
 ]

@@ -17,7 +17,7 @@ module.exports = {
 			},
 			fontFamily: {
 				poppins: 'Poppins, sans-serif',
-				sourceCode: "'Source Code Pro', mono",
+				sourceCode: 'Montserrat, sans-serif',
 			},
 			boxShadow: {
 				top: '0px -6px 18px 1px rgba(0,0,0,0.39)',

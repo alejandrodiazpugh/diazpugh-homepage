@@ -2,7 +2,6 @@
 	{
 		"title": "01",
 		"content": "Creamos tu sistema de diseño en conjunto",
-		"buttonContent": "buttonContent",
 		"buttonDescription":
 			"Me aseguro de encontrar el estilo perfecto para que tu sitio sea justo lo que tienes en mente.",
 		"buttonBullets": [
@@ -14,7 +13,6 @@
 	{
 		"title": "02",
 		"content": "Desarrollo el sitio basado en tus necesidades",
-		"buttonContent": "buttonContent",
 		"buttonDescription":
 			"Escalamos el código de tu sitio para que implementemos justo la funcionalidad que buscas.",
 		"buttonBullets": [
@@ -26,7 +24,6 @@
 	{
 		"title": "03",
 		"content": "Entrego el sitio listo para utilizarse, sin complicaciones",
-		"buttonContent": "buttonContent",
 		"buttonDescription":
 			"Ya sea que posees el dominio o necesitas levantar todo desde cero, no tienes que preocuparte por configurar nada.",
 		"buttonBullets": [
