@@ -29,7 +29,7 @@ export default function precios({ allPricingData }: Props) {
 				<title>diazpugh - Servicios</title>
 			</Head>
 			<main className="relative w-screen">
-				<h2 className="capitalized mx-auto max-w-md pt-28 text-center font-poppins text-4xl font-[500] text-gray-700 md:max-w-2xl md:text-6xl">
+				<h2 className="capitalized underline decoration-orange mx-auto max-w-md pt-28 text-center font-poppins text-4xl font-[500] text-gray-700 md:max-w-2xl md:text-6xl">
 					Servicios
 				</h2>
 				<div className="w-10 py-5"></div>
@@ -41,7 +41,9 @@ export default function precios({ allPricingData }: Props) {
 						mejor sitio posible.
 					</p>
 				</section>
+				<div className="h-10"></div>
 				<PricingTable tableContent={allPricingData} />
+				<div className="h-10"></div>
 			</main>
 		</Layout>
 	);

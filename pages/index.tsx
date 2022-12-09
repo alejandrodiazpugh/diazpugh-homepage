@@ -50,7 +50,7 @@ export default function Home({ servicesData, cardData }: Props) {
 			</Head>
 			<article
 				id="hero"
-				className="relative z-50 grid h-screen w-screen snap-y snap-mandatory grid-cols-2 flex-col-reverse text-blue"
+				className="relative z-50 grid w-screen snap-y snap-mandatory grid-cols-2 flex-col-reverse text-blue"
 			>
 				<motion.div
 					initial={{ x: '-100%' }}

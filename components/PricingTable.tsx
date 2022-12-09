@@ -7,9 +7,8 @@ type Props = {
 };
 
 export default function PricingTable({ tableContent }: Props) {
-	console.log(tableContent);
 	return (
-		<section>
+		<section className='mx-auto max-w-2xl grid gap-5 grid-cols-1 lg:grid-cols-4'>
 			{tableContent.map((tier) => (
 				<PricingColumn
 					key={tier.id}
