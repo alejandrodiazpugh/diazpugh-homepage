@@ -3,14 +3,11 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import nombre from '../public/images/ADP-07.png';
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Navbar() {
-	const router = useRouter();
-	console.log(router.pathname);
 
 	const BREAKPOINT: number = 767;
 	// CHECK FOR WINDOW SIZE
