@@ -3,11 +3,15 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import nombre from '../public/images/ADP-07.png';
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Navbar() {
+	const router = useRouter();
+	console.log(router.pathname);
+
 	const BREAKPOINT: number = 767;
 	// CHECK FOR WINDOW SIZE
 	const getWindowDimensions = () => {
@@ -43,7 +47,7 @@ export default function Navbar() {
 	}, [windowDimension]);
 
 	return (
-		<header className="fixed top-0 z-[3000] h-24 w-screen bg-white pr-10 font-sourceCode font-semibold uppercase shadow-md">
+		<header className="fixed top-0 z-[3000] h-24 w-screen bg-white pr-10 font-sourceCode uppercase shadow-md">
 			<nav className="flex h-full w-screen items-center justify-between pr-10">
 				<div>
 					<Link href={'/'}>
@@ -77,7 +81,7 @@ export default function Navbar() {
 							}}
 							style={{ originY: 0 }}
 							exit={{ scaleY: 0 }}
-							className="absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-white pr-10 text-blue shadow-md transition-all"
+							className="absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-white pr-10 font-light text-blue shadow-md transition-all"
 						>
 							<li className="lg:transition-colors lg:hover:text-cyan">
 								<Link href={'/'}>Inicio</Link>

@@ -8,7 +8,7 @@ type Props = {
 
 export default function PricingTable({ tableContent }: Props) {
 	return (
-		<section className='mx-auto max-w-2xl grid gap-5 grid-cols-1 lg:grid-cols-4'>
+		<section className="mx-auto grid max-w-3xl grid-cols-1 gap-16 lg:grid-cols-4">
 			{tableContent.map((tier) => (
 				<PricingColumn
 					key={tier.id}
