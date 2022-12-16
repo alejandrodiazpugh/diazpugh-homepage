@@ -82,7 +82,10 @@ export default function Home({ servicesData, cardData }: Props) {
 					<Image src={logo} alt={'Logo de diazpugh'} priority />
 				</motion.div>
 			</article>
-			<article className="relative m-auto max-w-2xl">
+			<article className='h-56 bg-pink w-screen flex mx-auto'>
+
+			</article>
+			<article className="relative m-auto max-w-2x">
 				<h2 className="capitalized mx-auto max-w-md pt-28 text-center font-poppins text-4xl font-[500] text-gray-700 md:max-w-2xl md:text-6xl">
 					Tu huella en la red
 				</h2>
