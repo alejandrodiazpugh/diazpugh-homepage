@@ -1,17 +1,16 @@
-import React from 'react';
+import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-type Props = {};
+type Props = {}
 
-export default function ContactForm({}: Props) {
-	return (
-		<Formik
+export default function EmailDropContact({}: Props) {
+  return (
+    <Formik
 			initialValues={{
 				firstName: '',
 				lastName: '',
 				email: '',
-				message: '',
 			}}
 			validationSchema={Yup.object({
 				firstName: Yup.string()
@@ -22,16 +21,10 @@ export default function ContactForm({}: Props) {
 					.required('Campo Obligatorio'),
 				email: Yup.string()
 					.email('Dirección de correo no válida')
-					.required('Campo Obligatorio'),
-				message: Yup.string()
-					.max(
-						1000,
-						'El mensaje no puede tener más de 1,000 carácteres.'
-					)
-					.required('Campo obligatorio'),
+					.required('Campo Obligatorio')
 			})}
 			onSubmit={(values, { setSubmitting }) => {
-				fetch('/api/contactFormApi', {
+				fetch('/api/emailDropContactAPI', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -48,7 +41,7 @@ export default function ContactForm({}: Props) {
 		>
 			{(formik) => (
 				<Form
-					action="/api/contactFormApi"
+					action="/api/emailDropContactAPI"
 					method="POST"
 					className="mx-auto grid w-full max-w-2xl grid-cols-2 place-content-center gap-3 rounded-md border-2 py-10 shadow-md"
 					onSubmit={formik.handleSubmit}
@@ -95,20 +88,6 @@ export default function ContactForm({}: Props) {
 							<ErrorMessage name="email" />
 						</div>
 					</div>
-					<div className="col-span-2 flex flex-col gap-2 px-5">
-						<label className="font-medium" htmlFor="message">
-							Mensaje:
-						</label>
-						<Field
-							className="h-48 resize-none rounded-md border-2 border-yellow bg-gray-100 px-2"
-							as="textarea"
-							id="textarea"
-							{...formik.getFieldProps('message')}
-						/>
-						<div className="h-8 text-xs text-red">
-							<ErrorMessage name="message" />
-						</div>{' '}
-					</div>
 					<button
 						className={`col-span-2 mx-auto w-20 rounded-lg border-2 border-gray-500 p-2 transition-all ${
 							formik.isValid &&
@@ -122,5 +101,5 @@ export default function ContactForm({}: Props) {
 				</Form>
 			)}
 		</Formik>
-	);
+  )
 }

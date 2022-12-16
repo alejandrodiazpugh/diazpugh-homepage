@@ -33,7 +33,7 @@ export default function precios({ allPricingData }: Props) {
 					Servicios
 				</h2>
 				<div className="w-10 py-5"></div>
-				<section>
+				<section className='mx-10 lg:mx-0'>
 					<p className="m-auto max-w-2xl text-center font-sourceCode">
 						Todos tenemos diferentes necesidades en cuanto a nuestra
 						presencia en línea. No dudes en acercarte con tus

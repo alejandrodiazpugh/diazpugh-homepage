@@ -32,10 +32,11 @@ export default function Service({
 			>
 				{title}
 			</h3>
+			<div className='h-10 lg:hidden'></div>
 			<p
-				className={`text-md px-10 text-center ${
-					isEven(id) && 'col-start-2'
-				} col-span-2 font-sourceCode`}
+				className={`col-span-3 lg:col-span-2 text-md px-10 text-center ${
+					isEven(id) && 'lg:col-start-2'
+				} font-sourceCode`}
 			>
 				{description}
 			</p>
@@ -44,8 +45,8 @@ export default function Service({
 				height={300}
 				src={img}
 				alt={alt}
-				className={`col-span-1 w-auto ${
-					isEven(id) && 'col-start-1 row-start-2'
+				className={`col-span-3 lg:col-span-1 w-auto ${
+					isEven(id) && 'lg:col-start-1 lg:row-start-2'
 				}`}
 			></Image>
 		</div>

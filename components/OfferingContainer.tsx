@@ -9,7 +9,7 @@ type Props = {
 
 export default function ServicesTableContainer({ servicesData }: Props) {
 	return (
-		<section className="mb-20 grid place-content-center gap-10">
+		<section className="mb-20 mx-5 grid place-content-center gap-10">
 			{servicesData?.map((service: any) => (
 				<Offering
 					key={service.id}

@@ -8,7 +8,7 @@ type Props = {
 
 export default function PricingColumn({ header, cells, price }: Props) {
   return (
-    <div className="flex flex-col gap-5 items-center">
+    <div className="flex flex-col gap-5 items-center px-10 lg: px-0">
       <h3 className=" text-center lg:h-20 text-lg">{header}</h3>
 	  <div className="w-full h-0.5 bg-yellow"></div>
 	  <div className="h-10"></div>

@@ -18,7 +18,7 @@ export default function Layout({ children }: Props) {
 				/>
 				<meta
 					name="keywords"
-					content="desarrollo, web, diseño, ecommerce, comercio, blog, cms, marketing digital, branding, base de datos, dominio, react, nextjs"
+					content="desarrollo,diazpugh, diaz, pugh, web, diseño, ecommerce, comercio, blog, cms, marketing digital, branding, base de datos, dominio, react, nextjs"
 				/>
 				<meta name="og:title" content="diazpugh - Desarrollo Web" />
 				<meta name="twitter:card" content="summary_large_image" />
