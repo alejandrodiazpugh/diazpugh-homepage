@@ -4,7 +4,6 @@ import EmailDropContact from '../components/EmailDropContact';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import logo from '../public/images/ADP-04.png';
 import CardContainer from '../components/CardContainer';
 import OfferingContainer from '../components/OfferingContainer';
@@ -52,7 +51,7 @@ export default function Home({ servicesData, cardData }: Props) {
 				id="hero"
 				className="relative z-50 grid min-h-screen w-screen snap-y snap-mandatory grid-cols-2"
 			>
-				<motion.div className="col-span-2 col-start-1 mx-10 flex flex-col justify-center lg:col-span-1">
+				<div className="col-span-2 col-start-1 mx-10 flex flex-col justify-center lg:col-span-1">
 					<h1 className="capitalized mx-auto max-w-md snap-y snap-mandatory pt-28 text-center font-poppins text-4xl font-[500] text-gray-800 md:max-w-2xl md:text-7xl">
 						Construyamos tu próxima{' '}
 						<span className="underline decoration-blue">
@@ -62,19 +61,10 @@ export default function Home({ servicesData, cardData }: Props) {
 					<h2 className="mx-auto my-10 max-w-2xl text-center font-sourceCode text-lg font-semibold text-gray-800 md:text-2xl">
 						Diseño y Desarrollo para tus necesidades en línea
 					</h2>
-				</motion.div>
-				<motion.div
-					initial={{ opacity: 0, scale: 0.2 }}
-					animate={{ opacity: 1, scale: 1 }}
-					transition={{
-						duration: 1.5,
-						delay: 1,
-						type: 'spring',
-					}}
-					className="-z-50 col-span-2 grid aspect-square w-[70%] cursor-pointer place-self-center rounded-full border-[1px] border-orange bg-pink opacity-25 shadow-md transition-all md:w-[50%] lg:col-span-1"
-				>
+				</div>
+				<div className="-z-50 col-span-2 grid aspect-square w-[70%] cursor-pointer place-self-center rounded-full border-[1px] border-orange bg-pink opacity-25 shadow-md transition-all md:w-[50%] lg:col-span-1">
 					<Image src={logo} alt={'Logo de diazpugh'} priority />
-				</motion.div>
+				</div>
 			</article>
 			<div className="h-10 w-screen"></div>
 			<article className="mx-auto flex h-56 w-screen items-center justify-center gap-10 bg-pink shadow-sm">
