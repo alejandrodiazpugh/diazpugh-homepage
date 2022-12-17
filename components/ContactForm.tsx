@@ -50,10 +50,10 @@ export default function ContactForm({}: Props) {
 				<Form
 					action="/api/contactFormApi"
 					method="POST"
-					className="mx-auto grid w-full max-w-2xl grid-cols-2 place-content-center gap-3 rounded-md border-2 py-10 shadow-md"
+					className="grid grid-cols-2 place-content-center gap-3 rounded-md border-2 py-10 shadow-md"
 					onSubmit={formik.handleSubmit}
 				>
-					<div className="col-span-2 lg:col-span-1 flex flex-col gap-2 px-5">
+					<div className="col-span-2 flex flex-col gap-2 px-5 md:col-span-1">
 						<label className="font-medium" htmlFor="firstName">
 							Nombre:
 						</label>
@@ -67,7 +67,7 @@ export default function ContactForm({}: Props) {
 							<ErrorMessage name="firstName" />
 						</div>
 					</div>
-					<div className="col-span-2 lg:col-span-1 flex flex-col gap-2 px-5">
+					<div className="col-span-2 flex flex-col gap-2 px-5 md:col-span-1">
 						<label className="font-medium" htmlFor="lastName">
 							Apellido:
 						</label>

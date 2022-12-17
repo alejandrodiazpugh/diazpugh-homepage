@@ -50,7 +50,7 @@ export default function Home({ servicesData, cardData }: Props) {
 				id="hero"
 				className="relative z-50 grid min-h-screen w-screen snap-y snap-mandatory grid-cols-2"
 			>
-				<motion.div className="col-span-2 col-start-1 mx-10 flex flex-col justify-center lg:col-span-1 lg:mx-0">
+				<motion.div className="col-span-2 col-start-1 mx-10 flex flex-col justify-center lg:col-span-1">
 					<h1 className="capitalized mx-auto max-w-md snap-y snap-mandatory pt-28 text-center font-poppins text-4xl font-[500] text-gray-800 md:max-w-2xl md:text-7xl">
 						Construyamos tu próxima{' '}
 						<span className="underline decoration-blue">
@@ -76,13 +76,13 @@ export default function Home({ servicesData, cardData }: Props) {
 			</article>
 			<div className="h-10 w-screen"></div>
 			<article className="mx-auto flex h-56 w-screen items-center justify-center gap-10 bg-pink shadow-sm">
-				<h3 className="ml-5 basis-96 text-center font-poppins text-xl text-gray-700">
+				<h3 className="ml-5 basis-96 text-center font-poppins font-semibold text-gray-700 md:text-2xl">
 					Revisa los paquetes que te ofrezco, y empecemos a trabajar
 					juntos.
 				</h3>
 				<div className="mr-5 flex basis-72 justify-center">
 					<Link href={'/servicios'}>
-						<button className="rounded-lg border-2 border-orange bg-white p-2 px-8 py-5 font-sourceCode text-xl text-gray-700 shadow-md transition-all hover:scale-105 hover:border-orange hover:bg-orange hover:text-white active:scale-95">
+						<button className="rounded-lg bg-white p-2 px-8 py-5 font-sourceCode text-xl text-gray-700 shadow-md transition-all hover:scale-105 hover:border-2 hover:border-orange hover:bg-orange hover:text-white active:scale-95">
 							Servicios
 						</button>
 					</Link>
@@ -131,7 +131,7 @@ export default function Home({ servicesData, cardData }: Props) {
 				</h2>
 				<EmailDropContact />
 			</article>
-			<div className="h-10"></div>
+			<div className="h-32"></div>
 		</Layout>
 	);
 }

@@ -33,22 +33,18 @@ export default function CardExpanded({
 				transition={{ duration: 0.3 }}
 				exit={{ opacity: 0, y: -300 }}
 				onClick={(e) => clickModal(e)}
-				className="z-50 col-span-3 mx-7 basis-96 overflow-y-auto rounded-md border-2 bg-white px-16 py-6 font-sourceCode text-blue shadow-sm backdrop-blur-lg"
+				className="z-50 col-span-3 mx-5 basis-96 overflow-y-auto rounded-md border-2 bg-white px-16 py-6 font-sourceCode text-blue shadow-sm backdrop-blur-lg"
 			>
 				<IoMdClose
 					className="absolute right-5 cursor-pointer justify-self-end fill-cyan transition-all hover:fill-blue"
 					onClick={() => handleClick()}
 				/>
 				<h3
-					className={`mx-7 font-poppins text-3xl text-blue transition-all md:text-5xl`}
+					className={`font-poppins text-3xl text-blue transition-all md:text-5xl`}
 				>
 					{title}
 				</h3>
-				<p
-					className={`mx-7 basis-96 py-6 font-sourceCode text-lg md:text-xl`}
-				>
-					{content}
-				</p>
+
 				<p className="text-md md:text-xl">{buttonDescription}</p>
 				<ul className="text-sm md:text-lg">
 					{buttonBullets?.map((bulletPoint: string) => (

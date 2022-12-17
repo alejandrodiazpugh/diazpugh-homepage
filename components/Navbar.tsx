@@ -8,7 +8,6 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Navbar() {
-
 	const BREAKPOINT: number = 767;
 	// CHECK FOR WINDOW SIZE
 	const getWindowDimensions = () => {
@@ -44,7 +43,7 @@ export default function Navbar() {
 	}, [windowDimension]);
 
 	return (
-		<header className="fixed top-0 z-[3000] h-24 w-screen bg-white pr-10 font-sourceCode uppercase shadow-md">
+		<header className="fixed top-0 z-[3000] h-24 w-screen bg-zinc-50 pr-10 font-sourceCode uppercase shadow-md">
 			<nav className="flex h-full w-screen items-center justify-between pr-10">
 				<div>
 					<Link href={'/'}>

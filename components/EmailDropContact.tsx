@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-type Props = {}
+type Props = {};
 
 export default function EmailDropContact({}: Props) {
-  return (
-    <Formik
+	return (
+		<Formik
 			initialValues={{
 				firstName: '',
 				lastName: '',
@@ -21,7 +21,7 @@ export default function EmailDropContact({}: Props) {
 					.required('Campo Obligatorio'),
 				email: Yup.string()
 					.email('Dirección de correo no válida')
-					.required('Campo Obligatorio')
+					.required('Campo Obligatorio'),
 			})}
 			onSubmit={(values, { setSubmitting }) => {
 				fetch('/api/emailDropContactAPI', {
@@ -43,10 +43,10 @@ export default function EmailDropContact({}: Props) {
 				<Form
 					action="/api/emailDropContactAPI"
 					method="POST"
-					className="mx-auto grid w-full max-w-2xl grid-cols-2 place-content-center gap-3 rounded-md border-2 py-10 shadow-md"
+					className="mx-auto grid w-full max-w-2xl grid-cols-2 place-content-center gap-3 rounded-md border-2 bg-white py-10 shadow-md"
 					onSubmit={formik.handleSubmit}
 				>
-					<div className="col-span-2 lg:col-span-1 flex flex-col gap-2 px-5">
+					<div className="col-span-2 flex flex-col gap-2 px-5 lg:col-span-1">
 						<label className="font-medium" htmlFor="firstName">
 							Nombre:
 						</label>
@@ -60,7 +60,7 @@ export default function EmailDropContact({}: Props) {
 							<ErrorMessage name="firstName" />
 						</div>
 					</div>
-					<div className="col-span-2 lg:col-span-1 flex flex-col gap-2 px-5">
+					<div className="col-span-2 flex flex-col gap-2 px-5 lg:col-span-1">
 						<label className="font-medium" htmlFor="lastName">
 							Apellido:
 						</label>
@@ -101,5 +101,5 @@ export default function EmailDropContact({}: Props) {
 				</Form>
 			)}
 		</Formik>
-  )
+	);
 }

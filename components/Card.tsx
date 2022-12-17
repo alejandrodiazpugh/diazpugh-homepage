@@ -26,7 +26,7 @@ export default function Card({
 
 	return (
 		<>
-			<section className="relative flex h-96 w-72 flex-col content-between rounded-lg border-2 pt-7 shadow-md transition-all">
+			<section className="relative flex h-96 w-72 flex-col content-between rounded-lg border-2 bg-white pt-7 shadow-md transition-all">
 				<h3
 					className={`mx-7 font-poppins text-5xl text-blue transition-all`}
 				>
@@ -37,7 +37,7 @@ export default function Card({
 				</p>
 				<div
 					onClick={() => handleClick()}
-					className="boder-2 z-10 grid h-24 w-full cursor-pointer place-content-center rounded-b-sm border-t-2 border-cyan bg-white text-blue transition-all hover:border-blue hover:bg-blue hover:text-white"
+					className="boder-2 z-10 grid h-24 w-full cursor-pointer place-content-center rounded-b-sm border-t-2 border-blue bg-white text-blue transition-all hover:border-blue hover:bg-blue hover:text-white"
 				>
 					<p className="font-sourceCode">
 						{!showModal ? buttonContent : 'ver menos'}
