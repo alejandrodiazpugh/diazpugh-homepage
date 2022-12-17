@@ -2,10 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import sendgrid from '@sendgrid/mail';
 
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
-
-console.log(process.env)
-
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '');
 export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse
