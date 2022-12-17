@@ -121,7 +121,7 @@ export default function Home({ servicesData, cardData }: Props) {
 			</article>
 			<article>
 				<h2 className="mx-auto max-w-md pt-28 text-center font-poppins text-4xl font-[500] capitalize text-gray-700 md:max-w-2xl md:text-6xl">
-					qué te ofrezco
+					Lo que ofrezco
 				</h2>
 				<div className="h-20 w-screen"></div>
 				<OfferingContainer servicesData={servicesData} />
