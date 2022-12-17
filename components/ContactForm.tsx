@@ -2,9 +2,16 @@ import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-type Props = {};
+type Props = {
+	state: boolean;
+	setter: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export default function ContactForm({}: Props) {
+const handleClick = (e: React.MouseEvent) => {
+	e.currentTarget.innerHTML = 'Enviando...';
+};
+
+export default function ContactForm({ state, setter }: Props) {
 	return (
 		<Formik
 			initialValues={{
@@ -40,6 +47,7 @@ export default function ContactForm({}: Props) {
 				}).then((res) => {
 					console.log('Response received');
 					if (res.status === 200) {
+						setter(true);
 						console.log('Response Succeeded');
 					}
 				});
@@ -110,7 +118,8 @@ export default function ContactForm({}: Props) {
 						</div>{' '}
 					</div>
 					<button
-						className={`col-span-2 mx-auto w-20 rounded-lg border-2 border-gray-500 p-2 transition-all ${
+						onClick={(e) => handleClick(e)}
+						className={`col-span-2 mx-auto rounded-lg border-2 border-gray-500 px-8 py-3 text-center transition-all ${
 							formik.isValid &&
 							'hover:scale-105 hover:border-yellow hover:text-gray-800 active:scale-95'
 						} `}

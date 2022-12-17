@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import ContactForm from '../components/ContactForm';
@@ -6,6 +6,7 @@ import ContactForm from '../components/ContactForm';
 type Props = {};
 
 export default function Contacto({}: Props) {
+	const [isSubmitted, setIsSubmitted] = useState(false);
 	return (
 		<Layout>
 			<Head>
@@ -36,7 +37,18 @@ export default function Contacto({}: Props) {
 				</section>
 				<div className="h-10"></div>
 				<section className=" mx-auto flex h-full w-full max-w-2xl items-center justify-center font-sourceCode">
-					<ContactForm />
+					{!isSubmitted ? (
+						<ContactForm
+							state={isSubmitted}
+							setter={setIsSubmitted}
+						/>
+					) : (
+						<p className="bg-gray-100 p-5 text-center text-lg">
+							Gracias, tu mensaje ha sido enviado. <br></br> ¡En
+							breve me pondré en contacto contigo para
+							responderte!
+						</p>
+					)}
 				</section>
 				<div className="h-20"></div>
 			</main>

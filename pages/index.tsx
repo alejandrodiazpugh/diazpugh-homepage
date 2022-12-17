@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import EmailDropContact from '../components/EmailDropContact';
 import Layout from '../components/Layout';
 import Link from 'next/link';
@@ -41,6 +42,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Home({ servicesData, cardData }: Props) {
+	const [isSubmitted, setIsSubmitted] = useState(false);
 	return (
 		<Layout>
 			<Head>
@@ -129,7 +131,14 @@ export default function Home({ servicesData, cardData }: Props) {
 					Si tienes alguna duda, déjame tus datos, y me pondré en
 					contacto contigo.
 				</h2>
-				<EmailDropContact />
+				{!isSubmitted ? (
+					<EmailDropContact setter={setIsSubmitted} />
+				) : (
+					<p className="bg-gray-100 p-5 text-center text-lg">
+						Gracias por dejar tu correo, me pondré en contacto
+						contigo lo antes posible.
+					</p>
+				)}
 			</article>
 			<div className="h-32"></div>
 		</Layout>

@@ -2,15 +2,22 @@ import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-type Props = {};
+type Props = {
+	setter: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export default function EmailDropContact({}: Props) {
+const handleClick = (e: React.MouseEvent) => {
+	e.currentTarget.innerHTML = 'Enviando...';
+};
+
+export default function EmailDropContact({ setter }: Props) {
 	return (
 		<Formik
 			initialValues={{
 				firstName: '',
 				lastName: '',
 				email: '',
+				message: 'Correo enviado desde Inicio sin mensaje',
 			}}
 			validationSchema={Yup.object({
 				firstName: Yup.string()
@@ -24,7 +31,7 @@ export default function EmailDropContact({}: Props) {
 					.required('Campo Obligatorio'),
 			})}
 			onSubmit={(values, { setSubmitting }) => {
-				fetch('/api/emailDropContactAPI', {
+				fetch('/api/emailDropContactApi', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -33,6 +40,7 @@ export default function EmailDropContact({}: Props) {
 				}).then((res) => {
 					console.log('Response received');
 					if (res.status === 200) {
+						setter(true);
 						console.log('Response Succeeded');
 					}
 				});
@@ -41,7 +49,7 @@ export default function EmailDropContact({}: Props) {
 		>
 			{(formik) => (
 				<Form
-					action="/api/emailDropContactAPI"
+					action="/api/emailDropContactApi"
 					method="POST"
 					className="mx-auto grid w-full max-w-2xl grid-cols-2 place-content-center gap-3 rounded-md border-2 bg-white py-10 shadow-md"
 					onSubmit={formik.handleSubmit}
@@ -89,7 +97,8 @@ export default function EmailDropContact({}: Props) {
 						</div>
 					</div>
 					<button
-						className={`col-span-2 mx-auto w-20 rounded-lg border-2 border-gray-500 p-2 transition-all ${
+						onClick={(e) => handleClick(e)}
+						className={`col-span-2 mx-auto rounded-lg border-2 border-gray-500 px-8 py-3 text-center transition-all ${
 							formik.isValid &&
 							'hover:scale-105 hover:border-yellow hover:text-gray-800 active:scale-95'
 						} `}
