@@ -48,7 +48,8 @@ export default function Navbar() {
 				<div>
 					<Link href={'/'}>
 						<Image
-							className="relative w-64"
+							className="relative aspect-auto w-64"
+							aria-label="Inicio"
 							priority
 							src={nombre}
 							alt=""
@@ -57,6 +58,7 @@ export default function Navbar() {
 				</div>
 				<button
 					onClick={handleClick}
+					aria-label="Abrir o cerrar barra de navegación"
 					className="flex justify-end lg:hidden"
 				>
 					{navOpen ? (
