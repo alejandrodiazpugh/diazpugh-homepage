@@ -62,7 +62,7 @@ export default function Home({ servicesData, cardData }: Props) {
 						Diseño y Desarrollo para tus necesidades en línea
 					</h2>
 				</div>
-				<div className="-z-50 col-span-2 grid aspect-square w-[70%] cursor-pointer place-self-center rounded-full border-[1px] border-orange bg-pink shadow-md transition-all md:w-[50%] lg:col-span-1">
+				<div className="-z-50 col-span-2 grid aspect-square max-w-xs cursor-pointer place-self-center rounded-full border-[1px] border-orange bg-pink shadow-md transition-all lg:col-span-1 xl:max-w-md">
 					<Image src={logo} alt={'Logo de diazpugh'} priority />
 				</div>
 			</article>

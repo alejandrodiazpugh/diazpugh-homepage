@@ -48,7 +48,7 @@ export default function Navbar() {
 				<div>
 					<Link href={'/'}>
 						<Image
-							className="relative aspect-auto w-64"
+							className="relative max-w-xs"
 							aria-label="Inicio"
 							priority
 							src={nombre}
