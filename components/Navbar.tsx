@@ -79,7 +79,7 @@ export default function Navbar() {
 							}}
 							style={{ originY: 0 }}
 							exit={{ scaleY: 0 }}
-							className="absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-white pr-10 font-light text-blue shadow-md transition-all"
+							className="absolute top-20 z-[9999] flex h-48 w-screen flex-col items-end justify-center gap-5 bg-zinc-50 pr-10 font-light text-blue shadow-md transition-all"
 						>
 							<li className="lg:transition-colors lg:hover:text-cyan">
 								<Link href={'/'}>Inicio</Link>
